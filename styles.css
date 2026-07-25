@@ -135,25 +135,24 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
 .sec--dark .btn:hover{background:transparent;color:var(--paper)}
 
 /* ── hero ─────────────────────────────────────────────── */
-.hero{padding-top:var(--s5);padding-bottom:0;position:relative;overflow:hidden}
+.hero{
+  padding-top:var(--s9);padding-bottom:0;position:relative;overflow:hidden
+}
+/* the client's own swept-line device stands in for hero photography */
 .hero__ribbon{
-  position:absolute;left:-9%;top:-30px;width:76%;max-width:none;
-  pointer-events:none;user-select:none;z-index:0;
-  -webkit-mask-image:linear-gradient(100deg,#000 42%,transparent 88%);
-  mask-image:linear-gradient(100deg,#000 42%,transparent 88%)
+  position:absolute;left:-4%;top:-40px;width:108%;max-width:none;
+  pointer-events:none;user-select:none;z-index:0
 }
 .hero>.wrap{position:relative;z-index:1}
-.hero__in{display:grid;grid-template-columns:1fr 452px;gap:var(--s7);align-items:end}
-.hero__text{padding-bottom:var(--s1)}
-.hero .lead{margin-top:var(--s4);color:var(--fg-mute)}
-.hero__cta{display:flex;align-items:center;gap:var(--s5);margin-top:var(--s5)}
-.hero__plate{margin:0;overflow:hidden}
-.hero__plate img{width:100%;aspect-ratio:5/6;object-fit:cover}
+.hero__in{display:block}
+.hero__text{max-width:none}
+.hero .lead{margin-top:var(--s4);color:var(--fg-mute);max-width:52ch}
+.hero__cta{display:flex;align-items:center;gap:var(--s5);margin-top:var(--s6)}
 
 /* the title block — a drawing sheet's data strip */
 .block{
   display:grid;grid-template-columns:repeat(4,1fr);
-  margin-top:var(--s6);border-top:1px solid var(--line);border-bottom:1px solid var(--line)
+  margin-top:var(--s8);border-top:1px solid var(--line);border-bottom:1px solid var(--line)
 }
 .block__i{padding:var(--s3) var(--s4) var(--s3) 0;border-left:1px solid var(--line);padding-left:var(--s4)}
 .block__i:first-child{border-left:0;padding-left:0}
@@ -372,14 +371,12 @@ ul,ol,dl,dd{margin:0;padding:0;list-style:none}
   .nav__act{margin-left:auto}
   .btn--sm{padding:16px 20px}
 
-  .hero{padding-top:var(--s5)}
-  .hero__ribbon{left:-34%;top:-16px;width:150%}
-  .hero__in{grid-template-columns:1fr;gap:var(--s5)}
-  .hero__text{padding-bottom:0}
-  .hero__plate{order:-1;margin-inline:calc(var(--gut) * -1)}
-  .hero__plate img{aspect-ratio:4/3}
+  .hero{padding-top:var(--s7)}
+  .hero__ribbon{left:-30%;top:-10px;width:200%}
+  .hero__text{max-width:none}
   .hero .lead{margin-top:var(--s3)}
   .hero__cta{margin-top:var(--s5);flex-wrap:wrap;gap:var(--s4)}
+  .block{margin-top:var(--s6)}
   .hero__cta .btn{flex:1 1 auto}
   .block{grid-template-columns:1fr 1fr;margin-top:var(--s6)}
   .block__i{padding:var(--s3) var(--s3) var(--s3) var(--s3)}
